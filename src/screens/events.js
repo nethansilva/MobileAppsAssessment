@@ -1,7 +1,8 @@
+import EventCard from "@/components/EventCard";
+
 import { useEventData } from "@/hooks/useEventData";
 
 import { FlatList, RefreshControl, View } from "react-native";
-import { Text } from "react-native-paper";
 
 export default function Events() {
 	const { events, loading, refresh } = useEventData();
@@ -11,7 +12,8 @@ export default function Events() {
 			<FlatList
 				data={events}
 				keyExtractor={(item) => String(item.id)}
-				renderItem={({ item }) => <Text>{item.title}</Text>}
+				renderItem={({ item }) => <EventCard info={item} />}
+				contentContainerStyle={{ gap: 10, padding: 10 }}
 				refreshControl={
 					<RefreshControl refreshing={loading} onRefresh={refresh} />
 				}

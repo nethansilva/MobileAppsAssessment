@@ -1,6 +1,7 @@
-import Events from "./screens/events";
-import Home from "./screens/home";
-import Settings from "./screens/settings";
+import Events from "@/screens/Events";
+import Home from "@/screens/Home";
+import Settings from "@/screens/Settings";
+
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 const Tab = createBottomTabNavigator();

@@ -1,8 +1,8 @@
-import TabsLayer from "./_layout";
+import TabsLayer from "@/_layout";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { registerRootComponent } from "expo";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 
 export default function Root() {
 	return (
