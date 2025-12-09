@@ -1,4 +1,5 @@
 import { useEventData } from "@/hooks/useEventData";
+
 import { FlatList, RefreshControl, View } from "react-native";
 import { Text } from "react-native-paper";
 
@@ -7,13 +8,14 @@ export default function Events() {
 
 	return (
 		<View>
-			<FlatList data={events}
-			keyExtractor={(item) => String(item.id)}
-			renderItem={({ item }) => (
-				<Text>{item.title}</Text>
-			)}
-			refreshControl={<RefreshControl refreshing={loading} onRefresh={refresh} />}
+			<FlatList
+				data={events}
+				keyExtractor={(item) => String(item.id)}
+				renderItem={({ item }) => <Text>{item.title}</Text>}
+				refreshControl={
+					<RefreshControl refreshing={loading} onRefresh={refresh} />
+				}
 			/>
 		</View>
-	)
+	);
 }

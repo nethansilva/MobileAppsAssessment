@@ -6,5 +6,5 @@ export default function Settings() {
 		<View>
 			<Text>This is the settings screen.</Text>
 		</View>
-	)
+	);
 }
