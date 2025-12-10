@@ -1,13 +1,13 @@
 import EventCard from "@/components/EventCard";
 
-import { useEventData } from "@/hooks/useEventData";
+import { useEventList } from "@/hooks/useEventList";
 
 import { useNavigation } from "@react-navigation/native";
 import { Image, View } from "react-native";
 import { Button, Text } from "react-native-paper";
 
 export default function Home() {
-	const { events } = useEventData();
+	const { events } = useEventList();
 
 	const navigation = useNavigation();
 

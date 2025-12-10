@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-export function useEventData() {
+export function useEventList() {
 	const cache_key = "events_cache";
 
 	const [events, setEvents] = useState([]);

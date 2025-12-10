@@ -1,4 +1,4 @@
-import TabsLayer from "@/_layout";
+import StackLayer from "@/_layout";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { registerRootComponent } from "expo";
@@ -9,7 +9,7 @@ registerTranslation("en-GB", enGB);
 export default function Root() {
 	return (
 		<NavigationContainer>
-			<TabsLayer />
+			<StackLayer />
 		</NavigationContainer>
 	);
 }

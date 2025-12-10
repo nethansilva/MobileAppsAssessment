@@ -1,9 +1,14 @@
+import { useNavigation } from "@react-navigation/native";
 import { View } from "react-native";
 import { Card, Text } from "react-native-paper";
 
 export default function EventCard({ info }) {
+	const navigation = useNavigation();
+
 	return (
-		<Card>
+		<Card
+			onPress={() => navigation.navigate("event", { eventId: info.id })}
+		>
 			<View style={{ padding: 10, gap: 5 }}>
 				<View
 					style={{

@@ -2,16 +2,13 @@ import { useCallback, useState } from "react";
 
 import EventCard from "@/components/EventCard";
 
-import { useEventData } from "@/hooks/useEventData";
+import { useEventList } from "@/hooks/useEventList";
 
 import { FlatList, RefreshControl, View } from "react-native";
 import { Chip, IconButton, Searchbar } from "react-native-paper";
 import { DatePickerModal } from "react-native-paper-dates";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export default function Events() {
-	const insets = useSafeAreaInsets();
-
 	const categories = [
 		"Fitness",
 		"Social",
@@ -26,7 +23,7 @@ export default function Events() {
 		"Entertainment"
 	];
 
-	const { events, loading, refresh } = useEventData();
+	const { events, loading, refresh } = useEventList();
 
 	const [range, setRange] = useState({
 		startDate: undefined,
