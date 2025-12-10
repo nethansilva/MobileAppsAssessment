@@ -50,7 +50,14 @@ export default function Event({ route }) {
 							marginBottom: insets.bottom
 						}}
 					>
-						<Button mode="contained">Register</Button>
+						<Button
+							mode="contained"
+							onPress={() =>
+								navigation.navigate("registration", { eventId })
+							}
+						>
+							Register
+						</Button>
 					</View>
 				</View>
 			</ScrollView>

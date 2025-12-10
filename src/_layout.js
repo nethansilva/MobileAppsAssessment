@@ -3,6 +3,7 @@ import Events from "@/screens/tabs/Events";
 import Home from "@/screens/tabs/Home";
 import Settings from "@/screens/tabs/Settings";
 
+import RegistrationForm from "./screens/RegistrationForm";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -68,7 +69,8 @@ export default function StackLayer() {
 				component={TabsLayer}
 				options={{ headerShown: false }}
 			/>
-			<Stack.Screen name="event" component={Event} />
+			<Stack.Screen name="event" component={Event} options={{ headerBackTitle: 'Back' }}/>
+			<Stack.Screen name="registration" component={RegistrationForm} options={{ title: "Register" }}/>
 		</Stack.Navigator>
 	);
 }
