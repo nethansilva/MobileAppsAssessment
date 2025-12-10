@@ -2,7 +2,9 @@ import TabsLayer from "@/_layout";
 
 import { NavigationContainer } from "@react-navigation/native";
 import { registerRootComponent } from "expo";
-import { StyleSheet } from "react-native";
+import { enGB, registerTranslation } from "react-native-paper-dates";
+
+registerTranslation("en-GB", enGB);
 
 export default function Root() {
 	return (
@@ -13,12 +15,3 @@ export default function Root() {
 }
 
 registerRootComponent(Root);
-
-const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: "#fff",
-		alignItems: "center",
-		justifyContent: "center"
-	}
-});
