@@ -13,7 +13,7 @@ export function useRegisterEvent() {
 
 			try {
 				const res = await fetch(
-					"https://grmobile.onrender.com/registrations",
+					"https://events.realmajed.com/registrations",
 					{
 						method: "POST",
 						headers: { "Content-Type": "application/json" },

@@ -18,7 +18,7 @@ export function useEventList() {
 				console.log("Using cached data");
 			}
 
-			const res = await fetch("https://grmobile.onrender.com/events");
+			const res = await fetch("https://events.realmajed.com/events");
 			const data = await res.json();
 			console.log("Data retrieved");
 			setEvents(data);

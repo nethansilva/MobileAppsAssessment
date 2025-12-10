@@ -11,7 +11,7 @@ export function useEventInfo({ eventId }) {
 
 		try {
 			const res = await fetch(
-				"https://grmobile.onrender.com/events/" + eventId
+				"https://events.realmajed.com/events/" + eventId
 			);
 			const data = await res.json();
 			setEvent(data);
