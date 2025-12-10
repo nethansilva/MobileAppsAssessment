@@ -36,7 +36,6 @@ export default function Events() {
 
 	const filteredEvents = events
 		.filter((event) => {
-			console.log(event.date, new Date(event.date));
 			if (new Date(event.date) < range.startDate) {
 				return false;
 			}
