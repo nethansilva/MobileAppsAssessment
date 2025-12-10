@@ -1,3 +1,5 @@
+import { useLayoutEffect } from "react";
+
 import { useEventInfo } from "@/hooks/useEventInfo";
 
 import { useNavigation } from "@react-navigation/native";
@@ -14,8 +16,15 @@ export default function Event({ route }) {
 
 	const { event, loading, refresh } = useEventInfo({ eventId });
 
+	useLayoutEffect(() => {
+		if (event) {
+			navigation.setOptions({
+				title: event.title.replace(" REMOTE", "")
+			});
+		}
+	}, [navigation, event]);
+
 	if (event) {
-		navigation.setOptions({ title: event.title.replace(" REMOTE", "") });
 		return (
 			<ScrollView
 				contentContainerStyle={{ flexGrow: 1 }}

@@ -1,4 +1,3 @@
-import Slider from "@react-native-community/slider";
 import { View } from "react-native";
 import { Button, SegmentedButtons, Switch, Text } from "react-native-paper";
 import { useSettings } from "@/hooks/useSettings";
@@ -12,6 +11,7 @@ export default function Settings() {
 
 	const update = (updates) =>
 		setSettings({ ...settings, ...updates });
+		saveSettings();
 
 	return (
 		<View style={{ gap: 10, padding: 10 }}>
@@ -28,7 +28,6 @@ export default function Settings() {
 					onValueChange={(v) => update({ themeConfig: v })}
 					buttons={[
 						{ value: "light", label: "Light" },
-						{ value: "system", label: "System" },
 						{ value: "dark", label: "Dark" }
 					]}
 				/>
@@ -44,9 +43,7 @@ export default function Settings() {
 			</View>
 
 			<View style={{ marginTop: 40 }}>
-				<Button mode="contained" onPress={() => saveSettings()}>
-					Save
-				</Button>
+				<Text>Restart the app to apply your settings.</Text>
 			</View>
 		</View>
 	);
